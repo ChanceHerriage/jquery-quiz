@@ -6,19 +6,23 @@
     "name": "JC Hamill",
     "url": "https://github.com/jchamill"
   },
+  "editor": {
+    "name": "Chance Herriage",
+    "url": "https://github.com/ChanceHerriage"
+  },
   "license": "MIT",
   "main": "dist/jquery.quiz.min.js",
   "description": "A simple jQuery quiz plugin.",
-  "homepage": "http://jchamill.github.com/jquery-quiz/",
+  "homepage": "https://github.com/ChanceHerriage/jquery-quiz",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jchamill/jquery-quiz.git"
+    "url": "https://github.com/ChanceHerriage/jquery-quiz.git"
   },
   "bugs": {
-    "url": "https://github.com/jchamill/jquery-quiz/issues"
+    "url": "https://github.com/ChanceHerriage/jquery-quiz/issues"
   },
   "dependencies": {
     "grunt": "^0.4.5",

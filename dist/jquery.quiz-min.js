@@ -1,6 +1,6 @@
 /*!
  * jquery-quiz v0.0.1 - A simple jQuery quiz plugin.
- * Copyright (c) 2020 JC Hamill - http://jchamill.github.com/jquery-quiz/
+ * Copyright (c) 2020 JC Hamill and Chance Herriage - https://github.com/ChanceHerriage/jquery-quiz
  * License: MIT
  */
 

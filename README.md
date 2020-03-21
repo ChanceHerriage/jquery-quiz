@@ -2,12 +2,11 @@
 
 Forked from: [jchamill/jquery-quiz](https://github.com/jchamill/jquery-quiz) on 03/21/2020
 
-## Disclaimer
+## Tips
 
-This is a very simple quiz plugin I created to port quizzes from
-an existing platform. It creates simple multiple choice quizzes.
-You can customize most of the screens that are displayed, as well
-as the text displayed.
+You can find examples of the quizzes you can make and a few of the 
+scenarios that are possible in `/demos/`.
+
 
 ## Usage
 
