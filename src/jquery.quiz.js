@@ -141,7 +141,8 @@
           }
         }
 
-        $('#quiz-response').html(response);
+        $('#quiz-response').html(base.options.parseResponseAsHTML ? jQuery.parseHTML(response) : resposne);
+
         $('#quiz-controls').fadeIn();
 
         if (typeof base.options.answerCallback === 'function') {
@@ -253,6 +254,7 @@
     allowIncorrect: true,
     counter: true,
     nextQuestionScrollToTop: true,
+    parseResponseAsHTML: true,
     counterFormat: '%current/%total',
     startScreen: '#quiz-start-screen',
     startButton: '#quiz-start-btn',

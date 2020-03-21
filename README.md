@@ -71,6 +71,10 @@ Don't forget to include jQuery.
 > If true, will automatically scroll to top of quiz
 > when the user proceeds to the next quesiton.
 
+`parseResponseAsHTML: boolean [default: true]`
+> If true, the response text will be rendered as HTML
+> elements to allow for more in-depth response customization.
+
 `counterFormat: string [default: '%current/%total']`
 > Specify the counter format. The placehoder `%current`
 > displays which question you are currently on. The placeholder
