@@ -114,14 +114,32 @@ Don't forget to include jQuery.
 
 #### Callbacks
 
+`setupCallback: function [default: undefined]`
+> Callback fired after the setup of the quiz has finished.
+
+`startCallback: function [default: undefined]`
+> Callback fired after the quiz has been started.
+
 `answerCallback: function [default: undefined]`
 > Callback fired after an answer is selected.
 
 `nextCallback: function [default: undefined]`
 > Callback fired after the next button is clicked.
 
+`gameOverCallback: function [default: undefined]`
+> Callback fired if the quiz option `allowIncorrect` is
+> set to `false` after the user misses a question.
+
 `finishCallback: function [default: undefined]`
 > Callback fired after the finish button is clicked.
+
+`restartCallback: function [default: undefined]`
+> Callback fired after the quiz is restarted to the
+> first question.
+
+`resetCallback: function [default: undefined]`
+> Callback fired after the quiz is reset to 
+> the first question with the user having seen the results.
 
 `homeCallback: function [default: undefined]`
 > Callback fired after the home button is clicked.

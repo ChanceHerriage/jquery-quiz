@@ -104,6 +104,10 @@
         $(gameOverScreen).hide();
         $(resultsScreen).hide();
         $('#quiz-controls').hide();
+
+        if (typeof base.options.setupCallback === 'function') {
+          base.options.setupCallback();
+        }
       },
       start: function() {
         base.$el.removeClass('quiz-start-state').addClass('quiz-questions-state');
@@ -115,6 +119,10 @@
         $('#quiz-counter').show();
         $('.question-container:first-child').show().addClass('active-question');
         base.methods.updateCounter();
+
+        if (typeof base.options.startCallback === 'function') {
+          base.options.startCallback();
+        }
       },
       answerQuestion: function(answerEl) {
         if (answerLocked) {
@@ -192,6 +200,10 @@
         $('#questions').hide();
         $('#quiz-finish-btn').hide();
         $(gameOverScreen).show();
+
+        if (typeof base.options.gameOverCallback === 'function') {
+          base.options.gameOverCallback();
+        }
       },
       finish: function() {
         base.$el.removeClass('quiz-questions-state').addClass('quiz-results-state');
@@ -216,6 +228,10 @@
         $('#quiz-counter').show();
         $('.question-container:first-child').show().addClass('active-question');
         base.methods.updateCounter();
+
+        if (typeof base.options.restartCallback === 'function') {
+          base.options.restartCallback();
+        }
       },
       reset: function() {
         answerLocked = false;
@@ -231,6 +247,10 @@
         $('#quiz-next-btn').show();
         $('#quiz-counter').hide();
         $('.active-question').hide().removeClass('active-question');
+
+        if (typeof base.options.resetCallback === 'function') {
+          base.options.resetCallback();
+        }
       },
       home: function() {
         base.methods.reset();
