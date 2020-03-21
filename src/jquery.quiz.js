@@ -136,16 +136,20 @@
           currentQuestionIndex = currentQuestion - 1,
           correct = questions[currentQuestionIndex].correctIndex;
 
-        if (selected === correct) {
+        if (selected === correct) { // compares ints of the index return in the answer and the index of the question set in setup.
           $answerEl.addClass('correct');
           response = questions[currentQuestionIndex].correctResponse;
           score++;
         } else {
           $answerEl.addClass('incorrect');
+
           response = questions[currentQuestionIndex].incorrectResponse;
           if (!base.options.allowIncorrect) {
             base.methods.gameOver(response);
             return;
+          } else if (base.options.highlightCorrect) {
+            var correctEl = $('.active-question>.answers>li:nth-child(' + (correct + 1) + ')>a');
+            correctEl.addClass('correct');
           }
         }
 
@@ -275,6 +279,7 @@
     counter: true,
     nextQuestionScrollToTop: true,
     parseResponseAsHTML: true,
+    highlightCorrect: false,
     counterFormat: '%current/%total',
     startScreen: '#quiz-start-screen',
     startButton: '#quiz-start-btn',

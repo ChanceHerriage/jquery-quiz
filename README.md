@@ -41,7 +41,7 @@ $('#quiz').quiz({
         'Answer 3',
         'Answer 4'
       ],
-      'correctIndex': 1,
+      'correctIndex': 1, // first answer is index zero
       'correctResponse': 'Custom correct response.',
       'incorrectResponse': 'Custom incorrect response.'
     }
@@ -73,6 +73,11 @@ Don't forget to include jQuery.
 `parseResponseAsHTML: boolean [default: true]`
 > If true, the response text will be rendered as HTML
 > elements to allow for more in-depth response customization.
+
+`highlightCorrect: boolean [default: false]`
+> If true, when an incorrect answer is selected, the correct
+> answer will be highlighted with `.correct`.
+
 
 `counterFormat: string [default: '%current/%total']`
 > Specify the counter format. The placehoder `%current`
@@ -112,6 +117,9 @@ Don't forget to include jQuery.
 > The text to display on the restart button.
 
 #### Callbacks
+
+With these callbacks you can extend the functions of each step of the quiz. 
+Ideal for adding analytics and other custom features.
 
 `setupCallback: function [default: undefined]`
 > Callback fired after the setup of the quiz has finished.
