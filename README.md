@@ -1,6 +1,6 @@
 # jQuery Quiz Plugin
 
-A simple jQuery quiz plugin.
+Forked from: [jchamill/jquery-quiz](https://github.com/jchamill/jquery-quiz) on 03/21/2020
 
 ## Disclaimer
 
@@ -66,6 +66,10 @@ Don't forget to include jQuery.
 > If true, a counter will be shown displaying the current
 > question and how many questions there are. The output
 > of the counter can be customized using `counterFormat`.
+
+`nextQuestionScrollToTop: boolean [default: true]`
+> If true, will automatically scroll to top of quiz
+> when the user proceeds to the next quesiton.
 
 `counterFormat: string [default: '%current/%total']`
 > Specify the counter format. The placehoder `%current`

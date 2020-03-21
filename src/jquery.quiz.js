@@ -1,4 +1,4 @@
-;(function($, window, document, undefined) {
+; (function($, window, document, undefined) {
 
   'use strict';
 
@@ -168,6 +168,10 @@
 
         base.methods.updateCounter();
 
+        if (base.options.nextQuestionScrollToTop) {
+          $(window).scrollTop(base.$el.position.top);
+        }
+
         if (typeof base.options.nextCallback === 'function') {
           base.options.nextCallback();
         }
@@ -248,6 +252,7 @@
   $.quiz.defaultOptions = {
     allowIncorrect: true,
     counter: true,
+    nextQuestionScrollToTop: true,
     counterFormat: '%current/%total',
     startScreen: '#quiz-start-screen',
     startButton: '#quiz-start-btn',
@@ -257,7 +262,7 @@
     gameOverScreen: '#quiz-gameover-screen',
     nextButtonText: 'Next',
     finishButtonText: 'Finish',
-    restartButtonText: 'Restart'
+    restartButtonText: 'Restart',
   };
 
   $.fn.quiz = function(options) {
