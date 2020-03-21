@@ -2,7 +2,7 @@ title: jQuery Quiz
 description: A simple jQuery quiz plugin.
 google_analytics: 
 show_downloads: true
-theme: jekyll-theme-minimal
+theme: jekyll-theme-cayman
 
 gems:
   - jekyll-mentions
