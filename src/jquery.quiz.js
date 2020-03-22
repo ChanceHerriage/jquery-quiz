@@ -136,7 +136,8 @@
           currentQuestionIndex = currentQuestion - 1,
           correct = questions[currentQuestionIndex].correctIndex;
 
-        if (selected === correct) { // compares ints of the index return in the answer and the index of the question set in setup.
+        // handling the answer element that the user clicked
+        if (selected === correct) {
           $answerEl.addClass('correct');
           response = questions[currentQuestionIndex].correctResponse;
           score++;
@@ -147,12 +148,17 @@
           if (!base.options.allowIncorrect) {
             base.methods.gameOver(response);
             return;
-          } else if (base.options.highlightCorrect) {
-            var correctEl = $('.active-question>.answers>li:nth-child(' + (correct + 1) + ')>a');
-            correctEl.addClass('correct');
-          }
+          } else if (base.options.highlightCorrect)
+            $('.active-question>.answers>li:nth-child(' + (correct + 1) + ')>a').addClass('correct');
         }
 
+        // Handling the hiding or disabling the not relevant answers on the active question
+        $('.active-question>.answers>li').each(function() {
+          if (!($(this).index() === selected || $(this).index() === correct)) base.options.hideNotRelevant ? $(this).hide() : base.options.disableNotRelevant ? $(this).find('a').attr('disabled', true) : null;
+        })
+
+
+        // Rendering the response text as HTML or text depending on the base.options set on initialization
         $('#quiz-response').html(base.options.parseResponseAsHTML ? jQuery.parseHTML(response) : resposne);
 
         $('#quiz-controls').fadeIn();
@@ -279,6 +285,8 @@
     counter: true,
     nextQuestionScrollToTop: true,
     parseResponseAsHTML: true,
+    disableNotRelevant: false,
+    hideNotRelevant: false,
     highlightCorrect: false,
     counterFormat: '%current/%total',
     startScreen: '#quiz-start-screen',

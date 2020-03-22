@@ -82,3 +82,8 @@
     background: #333;
     color: #fff;
 }
+
+a[disabled], a[disabled]:hover {
+   pointer-events: none;
+   color: #e1e1e1;
+}

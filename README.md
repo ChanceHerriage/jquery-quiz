@@ -74,10 +74,18 @@ Don't forget to include jQuery.
 > If true, the response text will be rendered as HTML
 > elements to allow for more in-depth response customization.
 
+`disableNotRelevant: boolean [default: false]`
+> If ture, when an answer is given only the selected & correct
+> answers will be highlighted. The other answers will be faded out and
+> become disabled anchor links.
+
+`hideNotRelevant: boolean [default: false]`
+> If true, when an answer is given only the selected & correct
+> answers will be shown. Highlighting the correct and incorrect.
+
 `highlightCorrect: boolean [default: false]`
 > If true, when an incorrect answer is selected, the correct
 > answer will be highlighted with `.correct`.
-
 
 `counterFormat: string [default: '%current/%total']`
 > Specify the counter format. The placehoder `%current`
